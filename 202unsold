@@ -1,6 +1,10 @@
 #!/bin/ruby
 
-require "./parameters.rb"
+require "./Parameters.rb"
+require "./DisplayLaws.rb"
+require "./DisplayZ.rb"
 
-a, b = Parameters.parse_parameters(ARGV)
-exit(0)
+a, b = Parameters.parseParameters(ARGV)
+
+laws = DisplayLaws.displayLaws(a, b)
+pZ = DisplayZ.displayZ(laws)
