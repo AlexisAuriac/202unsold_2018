@@ -1,0 +1,6 @@
+#!/bin/ruby
+
+require "./parameters.rb"
+
+a, b = Parameters.parse_parameters(ARGV)
+exit(0)
