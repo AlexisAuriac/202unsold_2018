@@ -1,6 +1,6 @@
 module DisplayProbabilities
     def DisplayProbabilities.displayProbabilities(a, b)
-        puts("––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––")
+        puts("------------------------------------------------------------")
         puts("\tX=10\tX=20\tX=30\tX=40\tX=50\tY law")
 
         results = []
@@ -29,7 +29,7 @@ module DisplayProbabilities
             printf("%.3f\t", sum)
         end
         puts("1")
-        puts("––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––")
+        puts("------------------------------------------------------------")
         return results, xLaw, yLaw
     end
 end
