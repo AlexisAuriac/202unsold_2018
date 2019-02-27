@@ -1,10 +1,12 @@
 #!/bin/ruby
 
 require "./Parameters.rb"
-require "./DisplayLaws.rb"
+require "./DisplayProbabilities.rb"
 require "./DisplayZ.rb"
+require "./DisplayResults.rb"
 
 a, b = Parameters.parseParameters(ARGV)
 
-laws = DisplayLaws.displayLaws(a, b)
-pZ = DisplayZ.displayZ(laws)
+probs, xLaw, yLaw = DisplayProbabilities.displayProbabilities(a, b)
+zLaw = DisplayZ.displayZ(probs)
+DisplayResults.displayResults(xLaw, yLaw, zLaw)

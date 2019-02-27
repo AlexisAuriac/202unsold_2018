@@ -1,9 +1,11 @@
-module DisplayLaws
-    def DisplayLaws.displayLaws(a, b)
+module DisplayProbabilities
+    def DisplayProbabilities.displayProbabilities(a, b)
         puts("––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––")
         puts("\tX=10\tX=20\tX=30\tX=40\tX=50\tY law")
 
         results = []
+        xLaw = []
+        yLaw = []
         (10..50).step(10) do |y|
             print("Y=#{y}\t")
             lineResults = []
@@ -12,7 +14,8 @@ module DisplayLaws
                 lineResults << p
                 printf("%.3f\t", p)
             end
-            printf("%.3f\n", lineResults.inject(0, :+))
+            yLaw << lineResults.inject(0, :+)
+            printf("%.3f\n", yLaw[-1])
             results << lineResults
         end
 
@@ -22,10 +25,11 @@ module DisplayLaws
             for j in 0..4
                 sum += results[j][i]
             end
+            xLaw << sum
             printf("%.3f\t", sum)
         end
         puts("1")
         puts("––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––")
-        return results
+        return results, xLaw, yLaw
     end
 end
