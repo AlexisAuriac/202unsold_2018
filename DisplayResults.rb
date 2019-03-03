@@ -24,7 +24,7 @@ module DisplayResults
         printf("variance of X:\t\t%.1f\n", variance([10, 20, 30, 40, 50], xLaw))
         printf("expected value of Y:\t%.1f\n", expectValue([10, 20, 30, 40, 50], yLaw))
         printf("variance of Y:\t\t%.1f\n", variance([10, 20, 30, 40, 50], yLaw))
-        printf("expected value of Y:\t%.1f\n", expectValue((20..100).step(10).to_a, zLaw))
+        printf("expected value of Z:\t%.1f\n", expectValue((20..100).step(10).to_a, zLaw))
         printf("variance of Z:\t\t%.1f\n", variance((20..100).step(10).to_a, zLaw))
         puts("------------------------------------------------------------")
     end
